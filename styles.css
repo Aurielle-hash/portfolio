@@ -119,6 +119,35 @@ nav.scrolled { border-bottom-color: var(--border-soft); }
 
 .nav-burger { display: none; background: none; border: none; color: var(--text); cursor: pointer; font-size: 24px; }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.lang-switch button {
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  cursor: pointer;
+  padding: 4px 6px;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  transition: color 0.2s;
+}
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button.active { color: var(--accent); }
+.lang-switch span { color: var(--text-faint); }
+
 /* ============================================
    HERO
    ============================================ */

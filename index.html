@@ -22,13 +22,20 @@
      ============================================ -->
 <nav id="nav">
   <div class="nav-logo">Aurielle<span>.</span></div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">À propos</a></li>
-    <li><a href="#projects">Projets</a></li>
-    <li><a href="#skills">Compétences</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="nav-burger" id="burger" aria-label="Menu">☰</button>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-i18n="navAbout">À propos</a></li>
+      <li><a href="#projects" data-i18n="navProjects">Projets</a></li>
+      <li><a href="#skills" data-i18n="navSkills">Compétences</a></li>
+      <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+    </ul>
+    <div class="lang-switch" id="langSwitch" aria-label="Language">
+      <button type="button" data-lang="fr">FR</button>
+      <span>/</span>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <button class="nav-burger" id="burger" data-i18n-aria="menuAria" aria-label="Menu">☰</button>
+  </div>
 </nav>
 
 <!-- ============================================
@@ -36,28 +43,28 @@
      ============================================ -->
 <header class="hero">
   <div class="container">
-    <div class="hero-label">Portfolio 2026 — GRC & Cybersécurité</div>
+    <div class="hero-label" data-i18n="heroLabel">Portfolio 2026 — GRC & Cybersécurité</div>
     <h1>
-      <span class="line">Gouvernance.</span>
-      <span class="line">Risque.</span>
-      <span class="line">Conformité.</span>
+      <span class="line" data-i18n="heroLine1">Gouvernance.</span>
+      <span class="line" data-i18n="heroLine2">Risque.</span>
+      <span class="line" data-i18n="heroLine3">Conformité.</span>
     </h1>
     <div class="hero-meta">
       <div class="meta-item">
-        <div class="meta-label">Basé à</div>
-        <div class="meta-value">Douala, Cameroun</div>
+        <div class="meta-label" data-i18n="metaBasedLabel">Basé à</div>
+        <div class="meta-value" data-i18n="metaBasedValue">Douala, Cameroun</div>
       </div>
       <div class="meta-item">
-        <div class="meta-label">Objectif</div>
-        <div class="meta-value">Junior GRC — Big Four</div>
+        <div class="meta-label" data-i18n="metaGoalLabel">Objectif</div>
+        <div class="meta-value" data-i18n="metaGoalValue">Junior GRC — Big Four</div>
       </div>
       <div class="meta-item">
-        <div class="meta-label">Frameworks</div>
-        <div class="meta-value">ISO 27001 · NIST · RGPD</div>
+        <div class="meta-label" data-i18n="metaFrameLabel">Frameworks</div>
+        <div class="meta-value" data-i18n="metaFrameValue">ISO 27001 · NIST · RGPD</div>
       </div>
       <div class="meta-item">
-        <div class="meta-label">Approche</div>
-        <div class="meta-value">Project-based learning</div>
+        <div class="meta-label" data-i18n="metaApproachLabel">Approche</div>
+        <div class="meta-value" data-i18n="metaApproachValue">Project-based learning</div>
       </div>
     </div>
   </div>
@@ -69,31 +76,23 @@
 <section id="about">
   <div class="container">
     <div class="section-head">
-      <div class="section-num">01 — À propos</div>
+      <div class="section-num" data-i18n="aboutNum">01 — À propos</div>
     </div>
     <div class="about-grid">
       <div class="about-text">
-        <h2 style="font-family:var(--font-display); font-size:clamp(32px,4.5vw,52px); font-weight:300; line-height:1.1; letter-spacing:-0.02em; margin-bottom:32px;">
+        <h2 data-i18n="aboutH2" style="font-family:var(--font-display); font-size:clamp(32px,4.5vw,52px); font-weight:300; line-height:1.1; letter-spacing:-0.02em; margin-bottom:32px;">
           Je construis un parcours GRC à partir d'un <em style="color:var(--accent); font-style:italic;">profil technique</em>, projet après projet.
         </h2>
-        <p>
+        <p data-i18n="aboutP1">
           Mon approche est strictement <strong>project-based</strong> : chaque compétence est acquise en l'appliquant sur un cas concret, puis documentée au niveau de qualité attendu dans un cabinet Big Four.
         </p>
-        <p>
+        <p data-i18n="aboutP2">
           Ce portfolio réunit mes livrables d'audit, de risk management et de cybersécurité. Chaque projet inclut sa méthodologie, ses livrables et le raisonnement professionnel derrière chaque choix — ce qui compte en entretien, c'est le <em style="color:var(--accent);">pourquoi</em>, pas seulement le <em style="color:var(--accent);">quoi</em>.
         </p>
       </div>
       <aside class="about-side">
-        <h3>— Stack méthodologique</h3>
-        <ul>
-          <li>ISO 27001 <span>Annexe A</span></li>
-          <li>NIST SP 800-30 <span>Risk</span></li>
-          <li>NIST CSF <span>2.0</span></li>
-          <li>RGPD <span>Conformité</span></li>
-          <li>ISO 31000 <span>Risk mgmt</span></li>
-          <li>PCI-DSS <span>v4.0</span></li>
-          <li>EY Global Audit <span>Méthodo</span></li>
-        </ul>
+        <h3 data-i18n="aboutSideTitle">— Stack méthodologique</h3>
+        <ul id="stackList"></ul>
       </aside>
     </div>
   </div>
@@ -105,8 +104,8 @@
 <section id="projects">
   <div class="container">
     <div class="section-head">
-      <div class="section-num">02 — Projets</div>
-      <h2>Travaux <em>sélectionnés</em></h2>
+      <div class="section-num" data-i18n="projectsNum">02 — Projets</div>
+      <h2 data-i18n="projectsH2">Travaux <em>sélectionnés</em></h2>
     </div>
     <div class="projects-grid" id="projectsGrid"></div>
   </div>
@@ -118,49 +117,25 @@
 <section id="skills">
   <div class="container">
     <div class="section-head">
-      <div class="section-num">03 — Compétences</div>
-      <h2>Ce que je sais <em>faire</em></h2>
+      <div class="section-num" data-i18n="skillsNum">03 — Compétences</div>
+      <h2 data-i18n="skillsH2">Ce que je sais <em>faire</em></h2>
     </div>
     <div class="skills-grid">
-      <div class="skill-block">
+      <div class="skill-block" id="skillAudit">
         <h3>— Audit & Compliance</h3>
-        <ul>
-          <li>Audit de processus (P2P, O2C)</li>
-          <li>Analyse PESTEL sectorielle</li>
-          <li>Évaluation du RoMM</li>
-          <li>Tests de contrôles & substance</li>
-          <li>Framework OIR (reporting)</li>
-        </ul>
+        <ul></ul>
       </div>
-      <div class="skill-block">
+      <div class="skill-block" id="skillRisk">
         <h3>— Risk Management</h3>
-        <ul>
-          <li>Registre des risques</li>
-          <li>Heat map inhérent/résiduel</li>
-          <li>Plan de traitement des risques</li>
-          <li>Analyse NIST SP 800-30</li>
-          <li>Cartographie réglementaire</li>
-        </ul>
+        <ul></ul>
       </div>
-      <div class="skill-block">
+      <div class="skill-block" id="skillCyber">
         <h3>— Cybersécurité</h3>
-        <ul>
-          <li>ITGC (IAM, Change Mgmt)</li>
-          <li>ISO 27001 Annexe A</li>
-          <li>Threat modeling</li>
-          <li>Lab Docker CREL</li>
-          <li>Blue team fundamentals</li>
-        </ul>
+        <ul></ul>
       </div>
-      <div class="skill-block">
+      <div class="skill-block" id="skillSoft">
         <h3>— Soft skills</h3>
-        <ul>
-          <li>Communication client exigeant</li>
-          <li>Rédaction technique FR/EN</li>
-          <li>Professional skepticism</li>
-          <li>Structuration de réunion</li>
-          <li>Vulgarisation de l'analyse</li>
-        </ul>
+        <ul></ul>
       </div>
     </div>
   </div>
@@ -171,20 +146,20 @@
      ============================================ -->
 <section id="contact">
   <div class="container">
-    <div class="section-num" style="margin-bottom:24px;">04 — Contact</div>
-    <h2>Parlons de votre <em>prochain audit.</em></h2>
-    <p style="color:var(--text-dim); max-width:600px; margin:0 auto; font-size:17px;">
+    <div class="section-num" data-i18n="contactNum" style="margin-bottom:24px;">04 — Contact</div>
+    <h2 data-i18n="contactH2">Parlons de votre <em>prochain audit.</em></h2>
+    <p data-i18n="contactDesc" style="color:var(--text-dim); max-width:600px; margin:0 auto; font-size:17px;">
       Ouvert aux opportunités de stage et poste junior en GRC, audit et cybersécurité à Douala et à distance.
     </p>
     <div class="contact-links">
-      <a href="mailto:your.email@example.com">Email →</a>
+      <a href="mailto:maiva.magnifouet@2025.ucac-icam.com">Email →</a>
       <a href="#" target="_blank">LinkedIn →</a>
-      <a href="#" target="_blank">GitHub →</a>
+      <a href="https://github.com/Aurielle-hash/portfolio" target="_blank" rel="noopener">GitHub →</a>
     </div>
   </div>
 </section>
 
-<footer>
+<footer data-i18n="footer">
   © 2026 Aurielle NJANEN · Portfolio GRC · Construit à Douala
 </footer>
 
@@ -193,7 +168,7 @@
      ============================================ -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal" id="modal">
-    <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
+    <button class="modal-close" id="modalClose" data-i18n-aria="closeAria" aria-label="Fermer">×</button>
     <div id="modalContent"></div>
   </div>
 </div>

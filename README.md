@@ -3,19 +3,29 @@
 > Portfolio personnel de projets en **Gouvernance, Risque, Conformité** et **Cybersécurité**.
 > Construit à Douala, Cameroun. Objectif : poste junior GRC en Big Four.
 
-🔗 **Site en ligne :** https://Aurielle-hash.github.io/portfolio/
+🔗 **Site en ligne :** https://github.com/Aurielle-hash/portfolio/
 
 ---
+
+## 🌐 Bilingue FR / EN
+
+Le site propose un sélecteur `FR / EN` dans la navigation. Le choix est persisté dans `localStorage` et bascule en une seconde :
+
+- L'intégralité des textes (hero, about, projets, skills, contact, footer)
+- Les fiches projets et leur modale (contexte, méthodologie, trouvailles, livrables, compétences)
+- Le PDF téléchargé depuis chaque projet (version FR ou EN selon la langue active)
 
 ## 📁 Structure du projet
 
 ```
 portfolio-grc/
-├── index.html              # Structure HTML
-├── styles.css              # Tous les styles
-├── script.js               # Données des projets + logique
-├── projet1_ey_audit.pdf    # Livrable du projet 1 (FR)
-├── projet1_ey_audit_en.pdf # Livrable du projet 1 (EN)
+├── index.html                       # Structure HTML
+├── styles.css                       # Tous les styles
+├── script.js                        # i18n + données des projets + logique
+├── Projet EY Audit(FR).pdf          # Livrable projet 01 — FR
+├── Projet EY Audit(EN).pdf          # Livrable projet 01 — EN
+├── IT RISK ASSESSMENT(FR).pdf       # Livrable projet 02 — FR
+├── IT RISK ASSESSMENT(EN).pdf       # Livrable projet 02 — EN
 └── README.md
 ```
 
@@ -27,35 +37,41 @@ portfolio-grc/
 
 ## ✏️ Ajouter un nouveau projet
 
-Ouvre `script.js`, trouve l'objet `PROJECTS` en haut du fichier et ajoute un nouveau bloc :
+Ouvre `script.js`, trouve l'objet `PROJECTS` et ajoute un nouveau bloc. Les champs textuels peuvent être soit une simple chaîne (commune FR/EN), soit un objet `{ fr, en }` pour une version bilingue :
 
 ```javascript
 {
-  id: 4,
-  num: "Projet 04",
-  status: "Terminé",
+  id: 3,
+  num: { fr: "Projet 03", en: "Project 03" },
+  status: { fr: "Terminé", en: "Completed" },
   disabled: false,
   title: "Mon nouveau",
   titleEm: "projet",
-  subtitle: "Phrase d'accroche du projet.",
-  shortDesc: "Description courte affichée sur la carte.",
+  subtitle: {
+    fr: "Phrase d'accroche du projet.",
+    en: "Project tagline."
+  },
+  shortDesc: {
+    fr: "Description courte affichée sur la carte.",
+    en: "Short card description."
+  },
   tags: ["Tag1", "Tag2", "Tag3"],
-  context: "Contexte détaillé du projet.",
-  methodology: [
-    "<strong>Étape 1.</strong> Description.",
-    "<strong>Étape 2.</strong> Description."
-  ],
-  findings: [
-    "Trouvaille 1.",
-    "Trouvaille 2."
-  ],
-  deliverables: ["Livrable 1", "Livrable 2"],
+  context: { fr: "Contexte…", en: "Context…" },
+  methodology: {
+    fr: ["<strong>Étape 1.</strong> …", "<strong>Étape 2.</strong> …"],
+    en: ["<strong>Step 1.</strong> …", "<strong>Step 2.</strong> …"]
+  },
+  findings:     { fr: ["…"], en: ["…"] },
+  deliverables: { fr: ["…"], en: ["…"] },
   skills: ["Compétence 1", "Compétence 2"],
-  documentUrl: "mon_projet.pdf"
+  documentUrl: {
+    fr: "mon_projet_FR.pdf",
+    en: "mon_projet_EN.pdf"
+  }
 }
 ```
 
-Sauvegarde, recharge la page : le projet apparaît automatiquement.
+Sauvegarde, recharge la page : le projet apparaît automatiquement dans les deux langues.
 
 ## 🔧 Développement local
 
@@ -79,8 +95,7 @@ GitHub Pages redéploie automatiquement le site en 1-2 minutes.
 | # | Projet | Frameworks | Statut |
 |---|--------|-----------|--------|
 | 01 | EY Audit Simulation — FoodCo | EY Global Audit, ISA, ISO 27001 | ✅ Terminé |
-| 02 | Risk Management — PaySecure | ISO 31000, NIST SP 800-30, PCI-DSS | 🔄 En cours |
-| 03 | CREL Lab v1 | Docker, OpenCTI, Blue Team | 📋 Planifié |
+| 02 | IT Risk Assessment — Bank Transactions | NIST SP 800-30, AML, OIR | ✅ Terminé |
 
 ---
 
