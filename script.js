@@ -310,6 +310,122 @@ const PROJECTS = [
       fr: "IT RISK ASSESSMENT(FR).pdf",
       en: "IT RISK ASSESSMENT(EN).pdf"
     }
+  },
+  {
+    id: 3,
+    num: { fr: "Projet 03", en: "Project 03" },
+    status: { fr: "Terminé", en: "Completed" },
+    disabled: false,
+    title: "EY Technology",
+    titleEm: "Risk",
+    subtitle: {
+      fr: "Simulation Forage du programme EY Technology Risk — révision des contrôles IT sur le cycle de déploiement d'une application de paiement.",
+      en: "Forage simulation of the EY Technology Risk programme — IT controls review across a payment application deployment lifecycle."
+    },
+    shortDesc: {
+      fr: "Évaluation des contrôles IT d'un cycle de changement complet (demande → UAT → CCB → production) : 4 red flags identifiés, rapport de remédiation P1/P2/P3.",
+      en: "IT controls assessment across a full change cycle (request → UAT → CCB → production): 4 red flags identified, P1/P2/P3 remediation report."
+    },
+    tags: ["EY", "Technology Risk", "Change Mgmt", "ITGC", "Forage"],
+    context: {
+      fr: "Simulation Forage du programme EY Technology Risk. Rôle de consultant junior en risque technologique sur un scénario réel : révision des contrôles IT d'une application de paiement en cours de déploiement. Objectif : identifier les défaillances de gouvernance du changement susceptibles de générer un incident de sécurité ou de disponibilité en production.",
+      en: "Forage simulation of the EY Technology Risk programme. Junior technology risk consultant role on a real scenario: IT controls review for a payment application deployment. Objective: identify change governance failures liable to cause a security or availability incident in production."
+    },
+    methodology: {
+      fr: [
+        "<strong>Étape 1 — Cartographie du cycle de changement.</strong> Modélisation du flux complet : demande → développement → tests → UAT → validation CCB → déploiement production. Identification des acteurs, responsabilités et jalons de contrôle attendus à chaque étape.",
+        "<strong>Étape 2 — Questions de revue IT.</strong> Formulation de 12 questions d'audit couvrant la séparation des environnements, la documentation de test, les critères d'entrée en CCB, la traçabilité des approbations et la réversibilité du déploiement.",
+        "<strong>Étape 3 — Identification des red flags.</strong> Analyse comparative entre contrôles attendus et pratiques observées : 4 anomalies critiques détectées (UAT informel, violation SoD, quorum CCB non atteint, absence de plan de rollback).",
+        "<strong>Étape 4 — Rapport de remédiation.</strong> Classement des risques par criticité (P1 immédiat / P2 urgent / P3 planifié), rédaction de recommandations adressées au RSSI et au Change Advisory Board selon le modèle OIR."
+      ],
+      en: [
+        "<strong>Step 1 — Change cycle mapping.</strong> Full workflow modelling: request → development → testing → UAT → CCB sign-off → production deployment. Identifying actors, responsibilities and expected control checkpoints at each stage.",
+        "<strong>Step 2 — IT review questions.</strong> Formulation of 12 audit questions covering environment separation, test documentation, CCB entry criteria, approval traceability and deployment reversibility.",
+        "<strong>Step 3 — Red flag identification.</strong> Comparative analysis between expected controls and observed practices: 4 critical anomalies detected (informal UAT, SoD violation, CCB quorum not met, no rollback plan).",
+        "<strong>Step 4 — Remediation report.</strong> Risk ranking by criticality (P1 immediate / P2 urgent / P3 planned), recommendations addressed to CISO and Change Advisory Board using the OIR framework."
+      ]
+    },
+    findings: {
+      fr: [
+        "<strong>UAT informel (P1)</strong> : absence de critères d'acceptance documentés — tout rejet en production aurait engagé la responsabilité de l'équipe sans base probante ni possibilité de rejet formalisé.",
+        "<strong>Violation SoD (P1)</strong> : le développeur principal assurait également les tests d'intégration — conflict of interest détectable uniquement par revue du change log, non par contrôle automatique.",
+        "<strong>Quorum CCB non atteint (P2)</strong> : 2 membres sur 5 présents lors de la réunion de validation — approbation non conforme à la politique interne de gestion du changement.",
+        "<strong>Plan de rollback absent (P2)</strong> : aucune procédure de retour arrière testée, exposant l'application de paiement à une indisponibilité prolongée et à un risque financier direct en cas d'échec post-déploiement."
+      ],
+      en: [
+        "<strong>Informal UAT (P1)</strong>: no documented acceptance criteria — any production failure would have exposed the team without evidentiary grounds or formal rejection capability.",
+        "<strong>SoD violation (P1)</strong>: lead developer also conducted integration testing — conflict of interest detectable only through change log review, not automatic control.",
+        "<strong>CCB quorum not met (P2)</strong>: 2 out of 5 members present at the validation meeting — sign-off non-compliant with the internal change management policy.",
+        "<strong>Missing rollback plan (P2)</strong>: no tested rollback procedure, exposing the payment application to prolonged downtime and direct financial risk in the event of post-deployment failure."
+      ]
+    },
+    deliverables: {
+      fr: ["Cartographie du cycle de changement", "12 questions de revue IT", "Rapport de red flags (4 anomalies P1/P2)", "Plan de remédiation OIR structuré"],
+      en: ["Change cycle mapping", "12 IT review questions", "Red flag report (4 anomalies P1/P2)", "Structured OIR remediation plan"]
+    },
+    skills: ["Change Management", "CCB", "UAT", "ITGC", "Segregation of Duties", "Control Testing", "IT Risk", "OIR framework", "Technology Risk"],
+    documentUrl: {
+      fr: "IT_RISK_ASSESSMENT(FR).pdf",
+      en: "IT_RISK_ASSESSMENT(FR).pdf"
+    }
+  },
+  {
+    id: 4,
+    num: { fr: "Projet 04", en: "Project 04" },
+    status: { fr: "Terminé", en: "Completed" },
+    disabled: false,
+    title: "Pipeline",
+    titleEm: "DevSecOps",
+    subtitle: {
+      fr: "Projet de fin d'études — conception et déploiement d'un socle DevSecOps 100% open-source au sein de l'unité IRM d'Eneo Cameroon S.A.",
+      en: "Final-year project — design and deployment of a 100% open-source DevSecOps framework within the IRM unit of Eneo Cameroon S.A."
+    },
+    shortDesc: {
+      fr: "Pipeline CI/CD sécurisé (SAST + SCA + Container) + 6 dashboards Kibana + automatisation MTTR. Réduction de 96% du temps de remédiation (896h → 54h) validée en PoC sur 3 jours.",
+      en: "Secure CI/CD pipeline (SAST + SCA + Container) + 6 Kibana dashboards + MTTR automation. 96% remediation-time reduction (896h → 54h) validated over a 3-day PoC."
+    },
+    tags: ["DevSecOps", "CI/CD", "SAST", "SCA", "Eneo", "Elastic Stack"],
+    context: {
+      fr: "Projet de fin d'études réalisé au sein de l'unité IRM (Information Risk Management) d'Eneo Cameroon S.A. — opérateur national de l'électricité (1,2 million de clients, 10 régions). Constat initial : déploiements 100% manuels, absence de CI/CD, aucune visibilité sur la sécurité applicative, MTTR non mesurable. Mission : introduire une culture de l'automatisation et de la mesure dans un environnement à faible maturité DevOps, sous contrainte budgétaire absolue (100% open-source).",
+      en: "Final-year project completed within the IRM (Information Risk Management) unit of Eneo Cameroon S.A. — national electricity operator (1.2 million customers, 10 regions). Initial finding: 100% manual deployments, no CI/CD, zero application security visibility, unmeasurable MTTR. Mission: introduce a culture of automation and measurement in a low-DevOps-maturity environment, under absolute budget constraint (100% open-source)."
+    },
+    methodology: {
+      fr: [
+        "<strong>Phase 1 — Audit de l'existant.</strong> Diagnostic de l'infrastructure Eneo : absence de CI/CD, déploiements 100% manuels, sécurité traitée en fin de cycle. Identification de 5 risques critiques (O1–O5), benchmark d'acteurs africains (Standard Bank, Safaricom, MTN), formulation de 5 exigences techniques (E1–E5).",
+        "<strong>Phase 2 — Pipeline CI/CD sécurisé.</strong> Architecture Secure by Design : Jenkins orchestrant SAST (SonarQube), SCA (Snyk), scan conteneurs (Trivy). 13 services Docker Compose déployés from scratch. Quality Gate bloquant tout déploiement portant une vulnérabilité critique.",
+        "<strong>Phase 3 — Observabilité centralisée.</strong> 6 dashboards Kibana (Security Unified, Snyk SCA, Trivy Container, SonarQube SAST, Infrastructure Metricbeat, APM/RUM). Normalisation ECS des rapports multi-outils via script Python ReportNormalizer → Filebeat → Elasticsearch.",
+        "<strong>Phase 4 — Automatisation MTTR.</strong> 2 Watchers Elasticsearch en tandem : détection automatique des résolutions de vulnérabilités (Watcher 1) + notifications Slack triées (Watcher 2). Résultats : MTTR 896h → 54h (−96%) sur 3 jours actifs."
+      ],
+      en: [
+        "<strong>Phase 1 — Existing-state audit.</strong> Eneo infrastructure diagnosis: no CI/CD, 100% manual deployments, security handled at end of cycle. Identification of 5 critical risks (O1–O5), benchmark of African peers (Standard Bank, Safaricom, MTN), formulation of 5 technical requirements (E1–E5).",
+        "<strong>Phase 2 — Secure CI/CD pipeline.</strong> Secure-by-Design architecture: Jenkins orchestrating SAST (SonarQube), SCA (Snyk), container scan (Trivy). 13 Docker Compose services deployed from scratch. Quality Gate blocking any deployment carrying a critical vulnerability.",
+        "<strong>Phase 3 — Centralised observability.</strong> 6 Kibana dashboards (Security Unified, Snyk SCA, Trivy Container, SonarQube SAST, Infrastructure Metricbeat, APM/RUM). ECS normalisation of multi-tool reports via Python ReportNormalizer script → Filebeat → Elasticsearch.",
+        "<strong>Phase 4 — MTTR automation.</strong> 2 Elasticsearch Watchers in tandem: automatic vulnerability resolution detection (Watcher 1) + sorted Slack notifications (Watcher 2). Results: MTTR 896h → 54h (−96%) over 3 active days."
+      ]
+    },
+    findings: {
+      fr: [
+        "<strong>Infrastructure de sécurité nulle à l'état initial</strong> : 0 CI/CD, 100% déploiements manuels, 0 test automatisé — 5 risques critiques documentés (O1–O5) dont absence totale de visibilité sur les vulnérabilités applicatives.",
+        "<strong>Pipeline opérationnel en 4 semaines</strong> : 13 services Docker déployés from scratch, Quality Gate actif (3 passes / 1 fail sur historique PoC), SAST/SCA/Container scan déclenchés à chaque commit.",
+        "<strong>Observabilité complète sur 6 axes</strong> : dashboards couvrant vulnérabilités (sévérité, service, outil), qualité du code (617 min de dette technique Backend), infrastructure (CPU/RAM par conteneur) et performance APM/RUM (LCP 840ms, frontend 6,6s identifié comme goulot).",
+        "<strong>MTTR −96% validé</strong> : 896h de dette historique au J+1 → 54h en régime stabilisé au J+3 — démonstration quantitative qu'un pipeline DevSecOps réduit structurellement le délai de remédiation."
+      ],
+      en: [
+        "<strong>Zero security infrastructure at baseline</strong>: 0 CI/CD, 100% manual deployments, 0 automated testing — 5 documented critical risks (O1–O5) including total lack of visibility on application vulnerabilities.",
+        "<strong>Operational pipeline within 4 weeks</strong>: 13 Docker services deployed from scratch, Quality Gate active (3 passes / 1 fail over PoC history), SAST/SCA/container scan triggered on every commit.",
+        "<strong>Full observability across 6 axes</strong>: dashboards covering vulnerabilities (severity, service, tool), code quality (617 min of backend technical debt), infrastructure (CPU/RAM per container) and APM/RUM performance (LCP 840ms, frontend 6.6s identified as bottleneck).",
+        "<strong>MTTR −96% validated</strong>: 896h of historical debt at day+1 → 54h in stabilised regime at day+3 — quantitative demonstration that a DevSecOps pipeline structurally reduces remediation time."
+      ]
+    },
+    deliverables: {
+      fr: ["Architecture DevSecOps 13 services Docker Compose", "Pipeline Jenkins SAST + SCA + Container", "6 dashboards Kibana + Watchers MTTR", "Mémoire PFE 105 pages"],
+      en: ["DevSecOps architecture 13 Docker Compose services", "Jenkins SAST + SCA + Container pipeline", "6 Kibana dashboards + MTTR Watchers", "Full PFE dissertation 105 pages"]
+    },
+    skills: ["DevSecOps", "CI/CD", "SAST", "SCA", "Secure by Design", "MTTR", "Elastic Stack", "Jenkins", "Docker", "Vulnerability Management", "IRM", "MTTD"],
+    documentUrl: {
+      fr: "MEMOIRE-PFE-ENEO.pdf",
+      en: "MEMOIRE-PFE-ENEO.pdf"
+    }
   }
 ];
 

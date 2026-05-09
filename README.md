@@ -19,13 +19,15 @@ Le site propose un sélecteur `FR / EN` dans la navigation. Le choix est persist
 
 ```
 portfolio-grc/
-├── index.html                       # Structure HTML
-├── styles.css                       # Tous les styles
-├── script.js                        # i18n + données des projets + logique
-├── Projet EY Audit(FR).pdf          # Livrable projet 01 — FR
-├── Projet EY Audit(EN).pdf          # Livrable projet 01 — EN
-├── IT RISK ASSESSMENT(FR).pdf       # Livrable projet 02 — FR
-├── IT RISK ASSESSMENT(EN).pdf       # Livrable projet 02 — EN
+├── index.html                          # Structure HTML
+├── styles.css                          # Tous les styles
+├── script.js                           # i18n + données des projets + logique
+├── Projet EY Audit(FR).pdf             # Livrable projet 01 — FR
+├── Projet EY Audit(EN).pdf             # Livrable projet 01 — EN
+├── IT RISK ASSESSMENT(FR).pdf          # Livrable projet 02 — FR
+├── IT RISK ASSESSMENT(EN).pdf          # Livrable projet 02 — EN
+├── IT_RISK_ASSESSMENT(FR).pdf          # Livrable projet 03 — FR/EN
+├── MEMOIRE-PFE-ENEO.pdf               # Livrable projet 04 — FR/EN
 └── README.md
 ```
 
@@ -96,6 +98,8 @@ GitHub Pages redéploie automatiquement le site en 1-2 minutes.
 |---|--------|-----------|--------|
 | 01 | EY Audit Simulation — FoodCo | EY Global Audit, ISA, ISO 27001 | ✅ Terminé |
 | 02 | IT Risk Assessment — Bank Transactions | NIST SP 800-30, AML, OIR | ✅ Terminé |
+| 03 | EY Technology Risk — Payment App | ITGC, Change Mgmt, CCB, OIR | ✅ Terminé |
+| 04 | Pipeline DevSecOps — Eneo IRM | DevSecOps, CI/CD, SAST, SCA, Elastic Stack | ✅ Terminé |
 
 ---
 
