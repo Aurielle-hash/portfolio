@@ -1,9 +1,14 @@
 # Portfolio GRC — Aurielle NJANEN
 
-> Portfolio personnel de projets en **Gouvernance, Risque, Conformité** et **Cybersécurité**.
-> Construit à Douala, Cameroun. Objectif : poste junior GRC en Big Four.
+> Junior IT Risk & GRC Analyst · Freelance · Mobilité internationale
 
-🔗 **Site en ligne :** https://github.com/Aurielle-hash/portfolio/
+---
+
+## Pour les RH et recruteurs
+
+**→ [aurielle-hash.github.io/portfolio](https://aurielle-hash.github.io/portfolio/)**
+
+Site bilingue FR / EN · 4 projets documentés (audit, IT risk, DevSecOps) · Livrables PDF téléchargeables directement depuis chaque fiche projet.
 
 ---
 
