@@ -266,7 +266,7 @@ const PROJECTS = [
       fr: "Évaluation IT Risk en 3 phases (Prepare / Conduct / Communicate) sur un dataset Kaggle bancaire. 26 scénarios identifiés, 2 critiques, exposition cumulée > 16 M USD.",
       en: "3-phase IT Risk assessment (Prepare / Conduct / Communicate) on a Kaggle banking dataset. 26 scenarios identified, 2 critical, cumulative exposure > USD 16M."
     },
-    tags: ["NIST SP 800-30", "AML", "Fraud detection", "OIR", "Excel"],
+    tags: ["NIST SP 800-30", "AML", "Fraud detection", "OIR", "Kaggle", "Excel"],
     context: {
       fr: "Exercice hands-on de détection d'anomalies de sécurité appliqué à un dataset bancaire Kaggle (50 000 transactions, 15 colonnes). Le dataset est traité comme un registre critique : altération, corruption ou accès non autorisé compromettent toutes les décisions basées sur son contenu. Approche à la croisée de la cybersécurité, de la conformité AML et de la gouvernance des données.",
       en: "Hands-on security-anomaly detection exercise applied to a Kaggle banking dataset (50,000 transactions, 15 columns). The dataset is treated as a critical register: tampering, corruption or unauthorized access compromise every decision made from it. An approach at the intersection of cybersecurity, AML compliance and data governance."
@@ -307,9 +307,10 @@ const PROJECTS = [
     },
     skills: ["NIST SP 800-30", "L1 × L2", "Risk matrix 5×5", "OIR framework", "AML", "Layering", "Smurfing", "Money Mule", "Account Takeover", "Botnet", "Card Testing", "Audit trail", "Non-repudiation"],
     documentUrl: {
-      fr: "IT RISK ASSESSMENT(FR).pdf",
+      fr: "IT_RISK_ASSESSMENT(FR).pdf",
       en: "IT RISK ASSESSMENT(EN).pdf"
-    }
+    },
+    xlsxUrl: "IT_Risk_Assessment_BankTransactions.xlsx"
   },
   {
     id: 3,
@@ -365,8 +366,8 @@ const PROJECTS = [
     },
     skills: ["Change Management", "CCB", "UAT", "ITGC", "Segregation of Duties", "Control Testing", "IT Risk", "OIR framework", "Technology Risk"],
     documentUrl: {
-      fr: "IT_RISK_ASSESSMENT(FR).pdf",
-      en: "IT_RISK_ASSESSMENT(FR).pdf"
+      fr: "EY_Technology_Risk (FR).pdf",
+      en: "EY_Technology_Risk (EN).pdf"
     }
   },
   {
@@ -578,7 +579,10 @@ function openModal(p) {
     ${docUrl ? `
     <div class="modal-section">
       <h3>${dict.modalDocument}</h3>
-      <a href="${encodeURI(docUrl)}" target="_blank" rel="noopener" style="display:inline-block; padding:14px 24px; background:var(--accent); color:var(--bg); text-decoration:none; font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:0.08em; font-weight:500;">${dict.modalDownload}</a>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+        <a href="${encodeURI(docUrl)}" target="_blank" rel="noopener" style="display:inline-block; padding:14px 24px; background:var(--accent); color:var(--bg); text-decoration:none; font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:0.08em; font-weight:500;">${dict.modalDownload}</a>
+        ${p.xlsxUrl ? `<a href="${encodeURI(p.xlsxUrl)}" target="_blank" rel="noopener" style="display:inline-block; padding:14px 24px; background:transparent; color:var(--accent); border:1px solid var(--accent); text-decoration:none; font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:0.08em; font-weight:500;">${LANG === 'fr' ? 'Fichier Excel ↓' : 'Excel File ↓'}</a>` : ''}
+      </div>
     </div>` : ''}
   `;
   overlay.classList.add('open');
