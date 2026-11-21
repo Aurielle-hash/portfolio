@@ -32,7 +32,6 @@ portfolio-grc/
 ├── IT RISK ASSESSMENT(FR).pdf          # Livrable projet 02 — FR
 ├── IT RISK ASSESSMENT(EN).pdf          # Livrable projet 02 — EN
 ├── IT_RISK_ASSESSMENT(FR).pdf          # Livrable projet 03 — FR/EN
-├── MEMOIRE-PFE-ENEO.pdf               # Livrable projet 04 — FR/EN
 └── README.md
 ```
 
