@@ -423,10 +423,7 @@ const PROJECTS = [
       en: ["DevSecOps architecture 13 Docker Compose services", "Jenkins SAST + SCA + Container pipeline", "6 Kibana dashboards + MTTR Watchers", "Full PFE dissertation 105 pages"]
     },
     skills: ["DevSecOps", "CI/CD", "SAST", "SCA", "Secure by Design", "MTTR", "Elastic Stack", "Jenkins", "Docker", "Vulnerability Management", "IRM", "MTTD"],
-    documentUrl: {
-      fr: "MEMOIRE-PFE-ENEO.pdf",
-      en: "MEMOIRE-PFE-ENEO.pdf"
-    }
+    documentUrl: null
   }
 ];
 
